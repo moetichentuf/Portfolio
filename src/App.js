@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 
 function App() {
   return (
+
     <BrowserRouter>
       <Switch>
         <Route path="/about">

@@ -12,7 +12,7 @@ export default {
 
   // Landing Page Paragraph
   landingPagePara:
-    "Graphic/Web Designer",
+    "Graphic Designer",
 
   // Landing Page Image (replace - root/public/assets/photo.jpg)
   landingPageImage: "assets/photo.jpg",
