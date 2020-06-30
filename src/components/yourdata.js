@@ -2,7 +2,7 @@ export default {
   //(Please Do Not Remove The comma(,) after every variable)
 
   //Change The Website Template
-  name: "Moeti Chentuf",
+  name: "home",
 
   //Contact Email
   contactEmail: "moetichentuf@hotmail.com",
