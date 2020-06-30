@@ -5,8 +5,8 @@ import About from './components/About';
 import Landing from './components/Landing';
 
 function App() {
-  return (
 
+  return (
     <BrowserRouter>
       <Switch>
         <Route path="/about">
