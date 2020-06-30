@@ -8,7 +8,7 @@ export default {
   contactEmail: "moetichentuf@hotmail.com",
 
   // Landing Page Name
-  landingPageName: "Moeti Chentuf",
+  landingPageName: "...",
 
   // Landing Page Paragraph
   landingPagePara:
