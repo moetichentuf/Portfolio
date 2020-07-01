@@ -10,9 +10,8 @@ const Work = ({projects}) =>{
     })
     return(
         <div className="work_container">
-            <button onClick={() => set(!toggle)}>next</button>
-            {transition.map(({ item, key, props }) =>
-                item ? <animated.div style={props}> <div className="projects_container">
+            <h1>Projects.</h1>
+           <div className="projects_container">
                     {projects.map((project)=>(
                         <div key={project.id} className="project">
                             <div className="image">
@@ -25,25 +24,10 @@ const Work = ({projects}) =>{
                             </div>
                         </div>
                     ))}
-                </div></animated.div>
+                </div>
 
-
-                    : <animated.div style={props}> <div className="projects_container">
-                        {projects.map((project)=>(
-                            <div key={project.id} className="project">
-                                <div className="image">
-                                    <a href={project.url}>
-                                        <img src={project.imageSrc} alt={project.title}></img>
-                                    </a>
-                                </div>
-                                <div className="title">
-                                    {project.title}
-                                </div>
-                            </div>
-                        ))}
-                    </div></animated.div>
             )}
-            <h1>Projects.</h1>
+
 
         </div>
     )

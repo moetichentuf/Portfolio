@@ -107,11 +107,9 @@ a{
   font-size: 5rem;
   font-family: 'Montserrat';
   position: relative;
-  margin-bottom: 50%;
 
 }
 .work_container .projects_container{
-  margin-top: 30%;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap: 1rem;

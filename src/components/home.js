@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import {useTransition, animated, useSpring} from 'react-spring'
-
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 const Home = ({name, paragraph, authorImage})=>{
+    const [props, set1] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
+
     const [, setY] = useSpring(() => ({ y: 0 }))
     const [toggle, set] = useState([false])
     const transition = useTransition(toggle, null, {
@@ -23,8 +26,13 @@ const Home = ({name, paragraph, authorImage})=>{
                 {/*<p>{paragraph}</p>*/}
             </div>
             <div className="image_container">
-
-                <img src={authorImage} alt="Author"></img>
+                <animated.div
+                    className="card"
+                    onMouseMove={({clientX: x, clientY: y}) => set1({xys: calc(x, y)})}
+                    onMouseLeave={() => set1({xys: [0, 0, 1]})}
+                    style={{transform: props.xys.interpolate(trans)}}
+                >
+                <img src={authorImage} alt="Author"></img></animated.div>
                 <div className="bg"></div>
             </div>
             <button
